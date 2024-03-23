@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.message-container{
+    display: none;
+    position: absolute;
+    right: 0;
+    margin-right: 40px;
+    margin-top: 20px;
+    background-color: rgb(15, 10, 10);
+    width: 300px;
+    height: 80px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    animation: enterance 0.5s;
+}
+.message-container.leave{
+    animation: leaving 0.5s;
+}
+.message{
+    margin: auto;
+    color: rgb(22, 244, 51);
+    width: max-content;
+    font-size: larger;
+}
+
+.clear{
+    background-color: transparent;
+    font-size: large;
+    border: none;
+    color: aliceblue;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.clear:hover{
+    cursor: pointer;
+}
+.loader{
+    position: absolute;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    bottom: 0;
+    height: 10px;
+    background-color: rgb(24, 243, 79);
+    animation-name: loading;
+    animation-duration: 3s;
+}
+
+@keyframes loading{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+@keyframes enterance{
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes leaving{
+    from{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    to{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
